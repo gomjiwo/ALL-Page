@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+body{
+  background-color: #999;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+/*-----------header style--------- */
+
+/* 탑메뉴 */
+header{
+  width: 100%;
+  height: 60px;
+  background-color:#fff;
+  position: relative;
+  z-index: 500;
+  /* position: fixed; */
+  /* border: 1px solid #000; */
+  box-shadow: 0 0 5px rgba(0, 0, 0,0.3);
+}
+nav{
+  width: 1200px;
+  height: inherit;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav h1{flex: 2;}
+
+/* Main Menu */
+.gnb{
+  height: 60px;
+  flex: 6;
+  display: flex;
+  justify-content: flex-end;
+  text-align: center;
+}
+.gnb .main {width: 150px;}
+.gnb>.main>a{
+  /* border: 1px solid yellow; */
+  display: block;
+  position: relative;
+  width: inherit;
+  height: 60px;
+  line-height: 50px;
+  color: #222;
+  font-size: 16px;
+  font-weight: 500;
+}
+.gnb>.af>a:after{
+  content: "\f0dd";
+  font-family: fontawesome;
+  position: absolute;
+  right: 10px;
+}
+.gnb>.main:hover>a{color: orangered;}
+.gnb>.main:hover>a:after{color: orangered;}
+
+/* Sub Menu */
+.sub{
+  display: none;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.sub li{
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sub li a{
+  color: #222;
+  font-size: 15px;
+}
+.sub li:hover{background-color: orangered;opacity: 0.7;}
+.sub li:hover a{color: #fff;}
+
+/* -----Main Visual----- */
+#main{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+}
+.changeimg ul li{
+display: none;
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100vh;
+background-repeat: no-repeat ;
+background-size: cover;
+}
+.changeimg ul li:before{
+  content: '';
+  background: linear-gradient(135deg,rgba(100,130,130,0.7),transparent);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  }
+.changeimg ul li:first-child{display: block;}
+.changeimg ul li:nth-child(1){background-image: url(../image/main1.jpg);}
+.changeimg ul li:nth-child(2){background-image: url(../image/main2.jpg);}
+.changeimg ul li:nth-child(3){background-image: url(../image/art1.jpg);}
+
+/* 메인비주얼 텍스트 */
+.changeimg ul li dl{
+  position: absolute;
+  top: 180px;
+  left: 300px;
+  color: #fff;
+}
+.changeimg ul li dl dt{
+  font-size: 27px;
+  margin-bottom: 10px;
+}
+.changeimg ul li dl dt p{
+  font-size: 55px;
+  letter-spacing: -1px;
+  margin-bottom: 10px;
+}
+.changeimg ul li dl dd:nth-of-type(1){
+  font-size: 19px;
+  padding: 10px 0;
+}
+.changeimg ul li dl dd:nth-of-type(2){
+  width: 120px;
+  height: 42px;
+  background-color: rgba(0,0,0,0.7);
+  text-align: center;
+  line-height: 42px;
+  font-size: 16px;
+  margin-top: 10px;
+}
+.changeimg ul li dl dd:nth-of-type(2):hover{
+  background-color:#fff ;
+  color: #111;
+  border: 1px solid #666;
+}
+
+/* 메인비주얼 하단버튼 */
+.btn{
+  position: absolute;
+  top: 480px;
+  left: 300px;
+}
+.btn ul{display: flex;}
+.btn ul li{
+  width: 10px;
+  height: 10px;
+  background:#eee;
+  margin: 30px 5px;
+  cursor: pointer;
+}
+.btn ul li.active{
+  width: 50px;
+  background: yellow;
+}
+/* -----Sub Visual----- */
+#sub1{
+  background: url(../image/sub1.jpg)no-repeat center center fixed;
+  width: 100%;
+  height: 400px;
+  background-size: cover;
+}
+#sub2{
+  background: url(../image/sub2.jpg)no-repeat center center fixed;
+  width: 100%;
+  height: 400px;
+  background-size: cover;
+}
+#sub3{
+  background: url(../image/sub3.jpg)no-repeat center bottom fixed;
+  width: 100%;
+  height: 400px;
+  background-size: cover;
+}
+#sub4{
+  background: url(../image/sub4.jpg)no-repeat center center fixed;
+  width: 100%;
+  height: 400px;
+  background-size: cover;
+}
+.sheader h1{
+  position: absolute;
+  top: 200px;
+  left: 45%;
+  font-size: 60px;
+  color: #fff;
+  z-index: 200;
+}
+
+/* 하단contentbox */
+.bottom{
+  position: fixed;
+  width: 100%;
+  height: 250px;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0,0.8);
+  color: #fff;
+  display: flex;
+  /* border: 1px solid red; */
+}
+.bottom h4{
+  font-size: 20px;
+  margin: 5px 10px;
+  padding: 3px;
+  width: 80px;
+}
+.box1,.box2,.box3{
+  transform: translateX(250px);
+  padding: 0 10px;
+}
+.box1{
+  width: 400px;
+  height: inherit;
+  border-right: 1px solid #aaa;
+  position: relative;
+}
+.box1 h4{transform: translateX(20px);}
+.box1 a,.box2 a{
+  position: absolute;
+  font-size: 15px;
+  width: 45px;
+  top: 10px;
+  right: 15px;
+  padding: 3px 10px;
+}
+.box1 a:hover{text-decoration: underline;}
+.box2 a:hover{text-decoration: underline;}
+
+.tabin{
+  width: 400px;
+  height: 180px;
+  top: 10px;
+  margin-bottom: 10px;
+  overflow:hidden ;
+}
+input[name=tabmenu]{display: none;}
+.tabimg{
+  display:flex;
+  display: none;
+  transform: translateX(30px);
+}
+.tabimg img{
+  width: 170px;
+  height: 170px;
+  float: left;
+}
+.pcaption{
+  display: inline-block;
+  border-left: 1px solid #555;
+  padding-left: 7px;
+  width: 160px;
+  height: 130px;
+  font-size: 18px;
+  text-align:center ;
+  line-height: 40px;
+  margin-left: 15px;
+  transform: translateY(20px);
+  /* border: 1px solid red; */
+}
+.pcaption h5{font-weight:normal ;}
+.pcaption p{font-size:20px ;}
+.tbtn{
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  right: 90px;
+  bottom: 10px;
+}
+.tbtn label{
+  background-color: lightgrey;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%; 
+  display: inline-block;
+  cursor: pointer;
+}
+input[id=tab1]:checked ~ .slide1,
+input[id=tab2]:checked ~ .slide2,
+input[id=tab3]:checked ~ .slide3{
+  display: block;
+}
+input[id=tab1]:checked ~ .tbtn label[for=tab1],
+input[id=tab2]:checked ~ .tbtn label[for=tab2],
+input[id=tab3]:checked ~ .tbtn label[for=tab3]{
+  background-color: orange;
+}
+
+.box2{
+  border-right: 1px solid #aaa;
+  padding-right: 20px;
+  position: relative;
+}
+
+.newsarea{
+  display: flex;
+  font-size: 17px;
+  height: 120px;
+  line-height: 40px;
+  border-top: 1px solid #333;
+  margin: 10px 5px;
+  padding: 10px;
+  color: #bbb;
+  cursor: pointer;
+}
+.news_txt p:hover{color: #fff;}
+.date{
+  width: 200px;
+  text-align: right;
+}
+.box3{
+  width: 200px;
+  position: relative;
+  /* border: 1px solid red; */
+}
+.box3 h4{
+transform: translateX(50px);
+}
+.box3 span{
+  position: absolute;
+  color: #999;
+  font-size: 150px;
+  top: 45px;
+  left: 30px;
+  padding: 5px;
+  border-top: 1px solid #333;
+}
+.box3 span:hover{color:#fff ;}
+.box3 p{
+  position: absolute;
+  bottom: 15px;
+  left: 40%;
+  font-size: 20px;
+}

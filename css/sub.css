@@ -1,0 +1,489 @@
+@import url(common.css);
+@import url(header.css);
+@import url(footer.css);
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+body{
+  background: #eaeaea;
+  font-family: 'Noto Sans KR', sans-serif;}
+
+/* top button */
+.top{
+  position: fixed;
+  right: 30px;
+  bottom: 30px; 
+}
+.top a{
+  display: block;
+  width: 60px;
+  height: 52px;
+  border-radius: 50%;
+  background: url(../image/DongWha_Symbol\ .jpg) no-repeat center center;
+  box-shadow: 0 0 3px rgba(0,0,0,0.5);
+  transition: 0.35s;
+}
+#wrap{width: 100%;}
+header, section, footer{width: inherit;}
+html{scroll-behavior: smooth;}
+
+/* 서브메뉴*/
+.smenu{
+  border-bottom: 1px solid #ddd;
+  padding: 30px 0 ;
+  margin: 20px 0;
+}
+.smenu ul{
+  display: flex;
+  justify-content: center;
+}
+.smenu ul li a{
+  border: 1px solid #666;
+  display: block;
+  width: 130px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: 40px;
+  background-color: #fff;
+  margin: 0 20px;
+  color: #222;
+  font-weight: bold;
+}
+.smenu ul li a:not(.active):hover{
+  background-color: orange;
+  color: #fff;
+  border: 1px solid transparent;
+}
+.smenu ul li a.active{
+  background-color: orange;
+  color: #fff;
+  border: 1px solid transparent;
+}
+
+
+/* -------------- section style -------------- */
+
+/* section영역 공통 부분 */
+
+.section_in{
+  width: 1200px;
+  background: #fff;
+  margin: 0 auto;
+  padding: 50px;
+}
+.route{
+  color: #555;
+  font-size: 14px;
+}
+.route span:nth-of-type(2){color: #000;font-weight: bold;}
+.contents{
+  /* border: 1px solid #000; */
+  margin: auto;
+  width: 900px;
+  padding: 20px 0;
+}
+.contents h3{
+  color: #222;
+  font-size: 30px;
+  text-align: center;
+  padding: 30px 0;
+  width: 200px;
+  margin: 10px auto 20px ;
+}
+
+
+/* ------- (1) 인사말 (greeting)------- */
+
+
+.greeting{
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+}
+.ceo_img{text-align: center;}
+.greeting p{
+  width: 750px;
+  padding: 40px 0;
+  margin: auto;
+  font-size: 17px;
+}
+.vision{
+  display: flex;
+  text-align: center;
+}
+.vs{
+  padding: 20px;
+  width: 400px;
+  height: 400px;
+  margin:  0 15px;
+}
+.vs img{
+  height: 90px;
+  padding: 5px;
+  margin: 15px 0;
+}
+.vs h4{font-size: 20px;color: #444;}
+.vs p{padding: 10px 0;}
+.vs p strong{font-size: 30px;color: #222;}
+.vs p em{font-style: normal;color: darkred;}
+
+
+/* ------- (2) 오시는길(location)------- */
+.tab-inner{
+width: 800px;
+height: 900px;
+margin: auto;
+}
+
+/* tabButton */
+.mbtn{display: flex;}
+.mbtn li{
+  display: inline-block;
+  width: 200px;
+  background-color: #eee;
+  border-right:1px solid #bbb;
+  padding: 10px ;
+  border-top: 2px solid transparent;
+  font-size: 17px;
+  text-align: center;
+  cursor: pointer;
+}
+.mbtn li:last-child{border-right: none;}
+.mbtn li:hover,
+.mbtn li.active{
+  background-color: #fff;
+  border-top: 3px solid olivedrab;
+}
+
+/* TabContents */
+.tabCont{
+  background-color: #fff;
+  padding: 10px 0;
+  box-sizing: border-box;
+}
+.tabCont div ul{
+  width: 800px;
+  font-size: 16px;
+  line-height: 30px;
+  padding: 20px;
+  margin-top: 10px;
+  background-color: #cce5ff;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+.tabCont div{display: none;}
+.tabCont div.active{display: block;}
+.tabCont div{
+  top: 0;
+  left: 0;
+}
+.tabCont div iframe{
+  width: 800px;
+  height: 600px;
+}
+
+
+
+/* ------- (3) 연구개발(R&D)------- */
+.rnd{
+  margin: auto;
+}
+.rnd h3{font-size: 26px;}
+.text{
+  font-size: 17px;
+  margin: 30px auto;
+  padding: 20px 0;
+  transform: translateX(40px);
+  text-align: center;
+  color: #555;
+}
+.rdlist li{
+  display: flex;
+  margin: 30px;
+}
+.rdlist li img{
+  width: 300px;
+  height: 200px;
+  border-radius: 0 40px;
+  border: 1px solid #ddd;
+}
+.rcaption{
+  margin: 20px;
+  border-left: 2px solid yellowgreen;
+  padding: 15px;
+  /* border: 1px solid #000; */
+}
+.rcaption h4{
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #333;
+}
+.rcaption p{font-size: 20px;}
+
+.nimg{
+  /* border: 1px solid #000; */
+  width: 860px;
+  height: 350px;
+  padding: 20px;
+  margin-top: 30px ;
+  background-color: #f6f6f6;
+}
+.network img{
+  height: 80px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin:8px;
+  transform: translate(30px,30px);
+}
+
+
+/* ------- (4) 신제품(product1)------- */
+.new_list{
+  width: 900px;
+  margin: auto;
+  /* border: 1px solid #000; */
+}
+.new_list ul{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+}
+.new_list ul li{
+  border: 1px solid #ccc;
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 10px 5px;
+  position: relative;
+  cursor: pointer;
+}
+.caption{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  background-color: rgba(0,20,30,0.8);
+  color: #fff;
+  padding: 20px 10px;
+  box-sizing: border-box;
+  line-height: 20px;
+  text-align: center;
+  opacity: 0; 
+  transition: 0.3s;
+}
+.new_list ul li:hover .caption{opacity: 1;}
+
+.caption h4{
+  text-align: center;
+  font-size: 23px;
+  padding: 10px 0;
+}
+.caption p:nth-of-type(1){
+  color: #ccc;
+  font-size: 15px;
+  text-align: center;
+  margin: 10px 0;
+}
+.caption p:nth-of-type(2){
+  width: 220px;
+  height: 70px;
+  margin: 20px auto;
+  padding: 10px 0;
+}
+.caption a{
+  border: 1px solid #bbb;
+  bottom: 0;
+  padding: 5px 10px;
+  text-align:center;
+}
+.caption a:hover{
+  background-color: #fff;
+  color: #333;
+}
+
+
+/* ------- (5) 전체(product2)------- */
+.tab{
+  display: flex;
+  /* border: 1px solid #000; */
+  text-align: center;
+  margin: auto;
+}
+.tab li{
+  border-right: 1px solid #ddd;
+  /* border: 1px solid #000; */
+  width: 120px;
+  margin: 30px 0;
+  padding: 7px;
+  font-size: 15px;
+  cursor: pointer;
+  transform: translateX(110px);
+  transition: 0.2s;
+}
+.tab li.active2{ 
+  background-color: olivedrab;
+  color: #fff;}
+.tab li:nth-child(5){border-right: 0;}
+.tabcontents{
+  box-sizing: border-box;
+  width: inherit;
+  height: 1000px;
+}
+.tabcontents div ul{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  
+}
+.tabcontents div ul li{
+  text-align: center;
+  margin: 10px 5px;
+}
+.tabcontents div ul li img{
+  width: 250px;
+  height: 250px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+.tabcontents div ul li img:hover{
+  border: 1px solid olivedrab;
+  }
+.tabcontents div ul li h4{
+  font-size: 16px;
+  font-weight: 500;
+  padding: 5px;
+  margin-top: 5px;
+}
+.tabcontents div{display: none;}
+.tabcontents .active2{display: block;}
+.tabcontents .paging{
+  display: block;
+  margin-top: 30px;}
+
+
+/* ------- (6) 뉴스(news)------- */
+.news_wrap{ padding: 50px;}
+.news_list{
+  margin: auto;
+  font-size: 17px;
+  width: 100%;
+}
+.news_list tbody td{
+  display: inline-block;
+  border-bottom: 1px solid #ccc;
+  height: 30px;
+  margin: -1px;
+  padding: 10px;
+  cursor: pointer;
+}
+.news_list tbody td:nth-child(2){width: 600px;}
+.news_list tbody td:nth-child(2):hover{
+  text-decoration: underline;
+  color: #888;
+}
+
+.paging{
+  text-align: center;
+}
+.paging span{
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  line-height: 20px;
+  margin: 10px 3px;
+  cursor: pointer;
+}
+.paging .on{
+  border-radius: 5px;
+  background-color: brown;
+  color: #fff;
+}
+
+.search{
+  margin: 20px auto;
+  background-color: #eee;
+  padding: 20px 0;
+  text-align: center;
+  height: 30px;
+}
+.search select{
+  height: 30px;
+  padding: 0 20px 0 5px;
+  border: 1px solid #bbb; 
+}
+input[name=search]{
+  width: 300px;
+  height: 30px;
+  border: 1px solid #bbb;
+}
+input[type=submit]{
+  width: 90px;
+  padding:  0 25px;
+  border: 1px solid #bbb;
+  height: 30px;
+  background-color: #fff;
+}
+input[type=submit]:hover{
+  background-color: brown;
+  color: #fff;
+}
+
+
+
+
+/* ------- (7) 광고갤러리(adgallery)------- */
+.video{
+  width: 800px;
+  height: 450px;
+  margin-left: 50px;
+}
+.choice{
+  width: 800px;
+  background-color:#eee ;
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 10px 0;
+  transform: translateX(50px);
+  
+}
+.choice select{
+  border: 1px solid #ccc;
+  font-size: 15px;
+  display: inline-block;
+  margin: 5px;
+  padding: 5px 14px;
+}
+input[type=submit]{
+  border: 1px solid #ccc;
+  width: 100px;
+  height: 32px ;
+  font-size: 15px;
+}
+.adlist ul{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  width: 400px;
+  transform: translateX(30px);
+}
+.adlist ul li{
+  border: 1px solid red;
+  width: 350px;
+  margin:20px; 
+  transform: translateX(30px);
+  overflow: hidden;
+}
+.adlist ul li img{
+  width: 350px;
+  height: 200px;
+  box-shadow: 0 0 3px rgba(0,0,0,0.5);
+  transition: 0.3s;
+}
+.adlist ul li img:hover{transform: scale(1.1);}
+.adlist ul li h4{
+  font-size: 18px;
+  margin-top: 10px;
+}
+.adlist ul li p{
+  font-size: 13px;
+}
